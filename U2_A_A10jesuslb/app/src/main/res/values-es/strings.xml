@@ -3,9 +3,9 @@
     <string name="app_name">U2_A10Jesuslb</string>
     <string name="action_settings">Opciones</string>
     <string name="text_blue">Azul</string>
-    <string name="text_button">Añadir / Borrar</string>
-    <string name="text_clear">Borrar</string>
-    <string name="text_hint">Escribe algún texto y presiona el boton</string>
+    <string name="text_button">Añadir / Limpiar</string>
+    <string name="text_clear">Limpiar</string>
+    <string name="text_hint">Escribe algún texto y presiona el botón</string>
     <string name="text_image">Torre de San Sadurniño - Cambados</string>
     <string name="text_label">Aquí verás el texto escrito</string>
     <string name="text_red">Rojo</string>

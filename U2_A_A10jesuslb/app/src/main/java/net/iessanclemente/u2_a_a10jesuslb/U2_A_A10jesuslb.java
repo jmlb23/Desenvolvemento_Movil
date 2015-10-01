@@ -1,5 +1,6 @@
 package net.iessanclemente.u2_a_a10jesuslb;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
@@ -19,12 +20,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class U2_A_A10jesuslb extends AppCompatActivity {
+public class U2_A_A10jesuslb extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_u2__a__a10jesuslb);
+        final CheckBox b = (CheckBox) findViewById(R.id.ckBox);
 
 
         Switch s = (Switch) findViewById(R.id.swt);
@@ -88,15 +90,17 @@ public class U2_A_A10jesuslb extends AppCompatActivity {
         TextView tv = (TextView) findViewById(R.id.txtLabel);
         EditText et = (EditText) findViewById(R.id.txtEdi);
         final CheckBox c = (CheckBox) findViewById(R.id.ckBox);
-        //listener do checkbox
         if (c.isChecked()) {
+            et.setText("");
             tv.setText("");
-        }else {
+        }else if(!(et.getText().toString().equals(""))){
             if (et.getText().toString().equals("")) {
                 tv.setText("");
+                et.setText("");
             } else {
                 if (tv.getText().toString().equals("")) tv.append(et.getText());
                 else tv.append(" " + et.getText());
+                et.setText("");
             }
         }
     }
