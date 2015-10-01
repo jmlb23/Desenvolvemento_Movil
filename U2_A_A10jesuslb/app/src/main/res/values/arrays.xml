@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="values">
+        <item>@string/corunha</item>
+        <item>@string/lugo</item>
+        <item>@string/ourense</item>
+        <item>@string/pontevedra</item>
+        <item>@string/leon</item>
+    </string-array>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">U2_A10Jesuslb</string>
+    <string name="action_settings">Opciones</string>
+    <string name="text_blue">Azul</string>
+    <string name="text_button">Añadir / Borrar</string>
+    <string name="text_clear">Borrar</string>
+    <string name="text_hint">Escribe algún texto y presiona el boton</string>
+    <string name="text_image">Torre de San Sadurniño - Cambados</string>
+    <string name="text_label">Aquí verás el texto escrito</string>
+    <string name="text_red">Rojo</string>
+    <string name="text_start">Iniciar</string>
+    <string name="text_stop">Parar</string>
+    <string name="text_toast_gal">Has selecionado una provincia Gallega</string>
+    <string name="text_toast_no_gal">No has selecionado una provincia Gallega</string>
+    <string name="corunha">A Coruña</string>
+    <string name="leon">León</string>
+    <string name="lugo">Lugo</string>
+    <string name="ourense">Ourense</string>
+    <string name="pontevedra">Pontevedra</string>
+</resources>
