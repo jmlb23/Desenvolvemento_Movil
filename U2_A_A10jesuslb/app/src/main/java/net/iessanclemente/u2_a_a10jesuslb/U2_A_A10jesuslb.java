@@ -25,15 +25,7 @@ public class U2_A_A10jesuslb extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_u2__a__a10jesuslb);
-        final CheckBox c = (CheckBox) findViewById(R.id.ckBox);
-        //listener do checkbox
-        c.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                EditText et = (EditText) findViewById(R.id.txtEdi);
-                et.setText("");
-            }
-        });
+
 
         Switch s = (Switch) findViewById(R.id.swt);
         //listener do switch para o deslizamento
@@ -50,6 +42,7 @@ public class U2_A_A10jesuslb extends AppCompatActivity {
                 } else {
 
                     c.stop();
+                    c.setBase(SystemClock.elapsedRealtime());
                 }
             }
         });
@@ -94,13 +87,18 @@ public class U2_A_A10jesuslb extends AppCompatActivity {
 
         TextView tv = (TextView) findViewById(R.id.txtLabel);
         EditText et = (EditText) findViewById(R.id.txtEdi);
-        if (et.getText().toString().equals("")) {
+        final CheckBox c = (CheckBox) findViewById(R.id.ckBox);
+        //listener do checkbox
+        if (c.isChecked()) {
             tv.setText("");
         }else {
-            if(tv.getText().toString().equals("")) tv.append(et.getText());
-            else tv.append(" "+et.getText());
+            if (et.getText().toString().equals("")) {
+                tv.setText("");
+            } else {
+                if (tv.getText().toString().equals("")) tv.append(et.getText());
+                else tv.append(" " + et.getText());
+            }
         }
-
     }
 
     //metodo asociado os radios por cuestions de deseño non usei o radioGroup
