@@ -84,8 +84,8 @@
         />
     <ImageView
         android:id="@+id/imaxe"
-        android:layout_width="125dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/fotoAncho"
+        android:layout_height="@dimen/fotoAlto"
         android:layout_below="@id/viewFoto"
         android:layout_centerHorizontal="true"
         android:onClick="foto"
