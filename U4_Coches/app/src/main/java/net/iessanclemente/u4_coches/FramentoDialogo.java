@@ -7,6 +7,7 @@ import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -28,7 +29,7 @@ public class FramentoDialogo extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder adb = new AlertDialog.Builder(getActivity());
         adb.setCancelable(false);
-        adb.setTitle("proba");
+        adb.setTitle(getTag());
         final String[] arr = new String[]{
                 "ListView", "Spiner"
         };
@@ -36,16 +37,19 @@ public class FramentoDialogo extends DialogFragment {
         adb.setSingleChoiceItems(arr, 0, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                BufferedReader br = null;
+                Intent envia = new Intent();
+                File f = getActivity().getExternalFilesDir(null);
+                File f2 = new File(f.getAbsolutePath(),"hola");
+                StringBuilder sb = new StringBuilder();
+
                 if (which == 0) {
-                    Intent envia = new Intent();
-                    File f = getActivity().getExternalFilesDir(null);
-                    File f2 = new File(f.getAbsolutePath(),"hola");
+
                     try {
-                        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(f2)));
+                        br = new BufferedReader(new InputStreamReader(new FileInputStream(f2)));
 
                         String s = null;
                         boolean flag = true;
-                        StringBuffer sb = new StringBuffer();
                         while(flag){
 
                             s=br.readLine();
@@ -57,17 +61,44 @@ public class FramentoDialogo extends DialogFragment {
 
                                 sb.append(s).append("|");
                             }
-                        };
-                        Intent intentVista = new Intent();
-                        intentVista.setClassName(getActivity(), Vista_Texto.class.getName().toString());
-                        intentVista.putExtra("VALORES",sb.toString());
-                        intentVista.putExtra("TIPO",which);
-                        startActivity(intentVista);
+                        }
+                        Log.d("VALOR", sb.toString());
+                        envia.setClassName(getActivity(), Vista_Texto.class.getName().toString());
+                        envia.putExtra("VALORES", sb.toString());
+                        envia.putExtra("TIPO",arr[which]);
+                        startActivity(envia);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+                    dismiss();
                 } else if (which == 1) {
+                    try {
+                        br = new BufferedReader(new InputStreamReader(new FileInputStream(f2)));
 
+                        String s = null;
+                        boolean flag = true;
+
+                        while(flag){
+
+                            s=br.readLine();
+
+                            if(s==null) {
+                                flag = false;
+                                continue;
+                            }else{
+
+                                sb.append(s).append("|");
+                            }
+                        }
+                        Log.d("VALOR", sb.toString());
+                        envia.setClassName(getActivity(), Vista_Texto.class.getName().toString());
+                        envia.putExtra("VALORES", sb.toString());
+                        envia.putExtra("TIPO",arr[which]);
+                        startActivity(envia);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    dismiss();
                 }
             }
         });
