@@ -54,7 +54,7 @@ public class U4_Coches_Principal extends Activity {
     public void onClickEscribe(View view) {
         //non fai falla poñer teminacion porque xa mapea na clase R os Recursos
         boolean modo = false;
-        OutputStreamWriter fos = null;
+        OutputStreamWriter osw = null;
         RadioButton rbtEngade = (RadioButton) findViewById(R.id.rbtEngade);
         RadioButton rbtSobre = (RadioButton) findViewById(R.id.rbtSobre);
         EditText etCoche = (EditText) findViewById(R.id.etNome);
@@ -67,14 +67,14 @@ public class U4_Coches_Principal extends Activity {
 
         try {
             File f = getExternalFilesDir(null);
-            fos  = new OutputStreamWriter(new FileOutputStream(new File(f.getAbsolutePath(),"hola"),modo));
-            fos.write(etCoche.getText().toString().concat(" ").concat(Calendar.getInstance().getTime().toString()).concat("\n"));
+            osw  = new OutputStreamWriter(new FileOutputStream(new File(f.getAbsolutePath(),"hola"),modo));
+            osw.write(etCoche.getText().toString().concat(" ").concat(Calendar.getInstance().getTime().toString()).concat("\n"));
 
         }catch(IOException e){
             e.printStackTrace();
         }finally {
             try {
-                fos.close();
+                osw.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -87,6 +87,7 @@ public class U4_Coches_Principal extends Activity {
 
 
     public void onClickModo(View view) {
+        //mal implementado
         FramentoDialogo d = new FramentoDialogo();
         d.show(getFragmentManager(),"Elixe");
 

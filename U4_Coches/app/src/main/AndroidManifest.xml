@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".FramentoDialogo" >
         </activity>
+        <activity android:name=".Vista_Texto" >
+        </activity>
     </application>
 
 </manifest>

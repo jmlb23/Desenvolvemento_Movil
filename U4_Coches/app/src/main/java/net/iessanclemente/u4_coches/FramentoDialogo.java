@@ -18,6 +18,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class FramentoDialogo extends DialogFragment {
 
@@ -46,14 +49,20 @@ public class FramentoDialogo extends DialogFragment {
                         while(flag){
 
                             s=br.readLine();
-                            sb.append(s).append("\n");
+
                             if(s==null) {
                                 flag = false;
                                 continue;
+                            }else{
+
+                                sb.append(s).append("|");
                             }
                         };
-                        Toast.makeText(getActivity(),sb.toString(),Toast.LENGTH_SHORT).show();
-
+                        Intent intentVista = new Intent();
+                        intentVista.setClassName(getActivity(), Vista_Texto.class.getName().toString());
+                        intentVista.putExtra("VALORES",sb.toString());
+                        intentVista.putExtra("TIPO",which);
+                        startActivity(intentVista);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
