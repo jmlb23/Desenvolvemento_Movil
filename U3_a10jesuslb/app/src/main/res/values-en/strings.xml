@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">U3_a10jesuslb</string>
+    <string name="action_settings">Settings</string>
+    <string name="btnCancelar">Cancel</string>
+    <string name="btnSaida">Close</string>
+    <string name="datos">Data</string>
+    <string name="datosTlf">Data/Phone/Browser</string>
+    <string name="selec">Choose</string>
+    <string name="strText">Google</string>
+    <string name="strTlf">Phone</string>
+    <string name="title_activity_u3_a10jesuslb_secundaria">U3_a10jesuslb_secundaria</string>
+    <string name="tstDatos">Empty</string>
+    <string name="pistaTlfn">Phone</string>
+    <string name="pistaBusca">Browser</string>
+    <string name="strNoTlf">No phone number</string>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tvusuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/struser"
+        />
+    <EditText
+        android:id="@+id/etuser"
+        android:layout_below="@id/tvusuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        />
+    <TextView
+        android:id="@+id/tvpass"
+        android:layout_below="@id/etuser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strpass"
+
+        />
+    <EditText
+        android:id="@+id/etpass"
+        android:layout_below="@id/tvpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+
+        />
+
+</RelativeLayout>
