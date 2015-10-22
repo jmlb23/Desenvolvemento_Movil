@@ -24,7 +24,7 @@ os modos son interesantes
   world write
 ___
 getFilesDir dinos a ruta por defecto da app igual para o open que a crea ahi
-getExternalFilesDir datos a ruta da app na sd idem
+```getExternalFilesDir()``` datos a ruta da app na sd idem
 
 na interna /data/data/packageName/files
 
