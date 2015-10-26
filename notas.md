@@ -30,3 +30,9 @@ na interna /data/data/packageName/files
 
 para borrar é metodo de **JAVA SE** de File delete
 listar os contidos dos dires é usar **JAVA SE PLANO**
+
+```getExternalFilesDir()``` storage/sdcard/Android/data/package/files
+```getExternalStorageDirectory()``` storage/sdcard
+___
+memoria interna
+```getFilesDir();``` danos a ruta /data/data/package/files
