@@ -23,6 +23,7 @@ public class tarefa_I_4B_a10jesuslb_activity extends FragmentActivity {
     public void onClickShow(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
        //showDialog();
+        gete
     }
 
     public void onClickEngade(View view) {
