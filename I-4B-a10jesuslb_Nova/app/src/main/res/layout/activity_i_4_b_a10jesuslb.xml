@@ -45,5 +45,7 @@
         android:layout_above="@id/btnEngade"
         android:id="@+id/etEngade"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:hint="introduce os valores separados por comas i.e:\nvalor1,valor2..."
+        />
 </RelativeLayout>
