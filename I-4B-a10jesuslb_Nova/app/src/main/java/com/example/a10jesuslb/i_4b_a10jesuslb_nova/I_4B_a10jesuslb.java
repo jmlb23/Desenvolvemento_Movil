@@ -23,7 +23,8 @@ import java.util.Hashtable;
 
 public class I_4B_a10jesuslb extends FragmentActivity{
 
-    Dictionary<String,Boolean> dict = new Hashtable<>();
+    Dictionary<String,Boolean> dict;
+
 
 
 
@@ -35,8 +36,9 @@ public class I_4B_a10jesuslb extends FragmentActivity{
 
 
     }
-
+    //funcion asociada os botons
     public void onClickAmosa(View view) {
+        //se a view que se clicou é o do fragemento xo definimos cunha clase anonima e amosamolo
         if(view.getId()==R.id.btnFrag){
             DialogFragment d = new DialogFragment(){
 
@@ -47,55 +49,61 @@ public class I_4B_a10jesuslb extends FragmentActivity{
                 }
             };
             d.show(getFragmentManager(),"");
-
+        //se o show amosamos o dialogo clasico
         }else if(view.getId()==R.id.btnShow){
-            Log.i("BTN", "show");
             //se uso o showdialog android crea so unha soa vez o dialogo e en posteriores chamadas reutilizao
             this.onCreateDialog(0).show();
 
         }
     }
 
+
     @Override
     protected Dialog onCreateDialog(int id) {
-        return I_4B_a10jesuslb.this.construe();
+        return construe();
     }
 
+    //funcion que esta asociada o click para que agrege
     public void onClickAppend(View view) {
 
         EditText editText =(EditText)findViewById(R.id.etEngade);
         if(editText.getText()!=null && !editText.getText().toString().equals("")) Aux.addValores(editText.getText().toString().contains(",")? editText.getText().toString().split(","): new String[]{editText.getText().toString()});
-        else Toast.makeText(getApplicationContext(),"hey esta valeiro", Toast.LENGTH_SHORT).show();
+        else Toast.makeText(getApplicationContext(),getResources().getString(R.string.tstAdvertencia), Toast.LENGTH_SHORT).show();
         editText.setText("");
     }
 
+    //funcion que construe o dialog
     public Dialog construe(){
         AlertDialog.Builder builder = new AlertDialog.Builder(I_4B_a10jesuslb.this);
+        builder.setTitle(getResources().getString(R.string.strTitulo));
+        dict = new Hashtable<>();
         builder.setMultiChoiceItems(Aux.castArray(Aux.valores.toArray()), Aux.calculaBool(Aux.castArray(Aux.valores.toArray())), new DialogInterface.OnMultiChoiceClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-                if(isChecked)dict.put(Aux.castArray(Aux.valores.toArray())[which], true);
+                if(isChecked)dict.put(Aux.castArray(Aux.valores.toArray())[which], isChecked);
                 else dict.remove(Aux.castArray(Aux.valores.toArray())[which]);
             }
+
         });
-        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(getResources().getString(R.string.btnCancel), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
             }
         });
-        builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(getResources().getString(R.string.btnAcept), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
                 TextView tv = (TextView)I_4B_a10jesuslb.this.findViewById(R.id.tvAmosa);
                 tv.setText("");
                 Enumeration<String> enu = dict.keys();
-
+                String cade = new String("valores: ");
                 while(enu.hasMoreElements()){
-                    tv.setText(tv.getText()+" "+enu.nextElement());
+                   cade = cade.concat(" "+enu.nextElement());
 
                 }
+                tv.setText(cade);
             }
         });
         return builder.create();

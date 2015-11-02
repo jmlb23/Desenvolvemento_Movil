@@ -12,22 +12,25 @@ import java.util.Objects;
 
 public class Aux {
 
+    //Devolve un array de boolean en funcion dun array de strings
     public static boolean[] calculaBool(String... array) {
         boolean[] b = new boolean[array.length];
+        boolean valor =true;
+        int index =0;
         for (boolean s : b) {
 
-            s = Boolean.parseBoolean(""+((int)(Math.random()*10)));
-
+            b[index] = false;
+            index++;
         }
         return b;
     }
 
     public static ArrayList<String> valores = new ArrayList<>();
 
+    //agrega os valores o arraylist
     public static void addValores(String... val){
         for(String s : val){
             valores.add(s);
-            Log.i("valores", s);
         }
     }
 
@@ -38,7 +41,6 @@ public class Aux {
             a[v] = (String)o;
             v++;
         }
-        Log.i("valores", Arrays.toString(a));
         return a;
     }
 }
