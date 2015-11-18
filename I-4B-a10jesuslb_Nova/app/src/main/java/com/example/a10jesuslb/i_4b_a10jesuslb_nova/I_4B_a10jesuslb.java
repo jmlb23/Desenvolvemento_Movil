@@ -11,11 +11,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.Arrays;
 import java.util.Dictionary;
 import java.util.Enumeration;
@@ -82,6 +82,7 @@ public class I_4B_a10jesuslb extends FragmentActivity{
             public void onClick(DialogInterface dialog, int which, boolean isChecked) {
                 if(isChecked)dict.put(Aux.castArray(Aux.valores.toArray())[which], isChecked);
                 else dict.remove(Aux.castArray(Aux.valores.toArray())[which]);
+
             }
 
         });
@@ -95,15 +96,16 @@ public class I_4B_a10jesuslb extends FragmentActivity{
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                TextView tv = (TextView)I_4B_a10jesuslb.this.findViewById(R.id.tvAmosa);
+                TextView tv = (TextView) I_4B_a10jesuslb.this.findViewById(R.id.tvAmosa);
                 tv.setText("");
                 Enumeration<String> enu = dict.keys();
                 String cade = new String("valores: ");
-                while(enu.hasMoreElements()){
-                   cade = cade.concat(" "+enu.nextElement());
+                while (enu.hasMoreElements()) {
+                    cade = cade.concat(" " + enu.nextElement());
 
                 }
                 tv.setText(cade);
+
             }
         });
         return builder.create();

@@ -2,13 +2,7 @@ package com.example.a10jesuslb.i_4b_a10jesuslb_nova;
 
 
 
-import android.util.Log;
-import android.widget.ArrayAdapter;
-
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
 
 public class Aux {
 
