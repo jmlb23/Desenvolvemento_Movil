@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="valore_iniciais">
+        <item>Elemento 1</item>
+        <item>Elemento 2</item>
+        <item>Elemento 3</item>
+    </array>
+
+</resources>

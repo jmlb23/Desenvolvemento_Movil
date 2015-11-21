@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">I-4B-a10jesuslb_Nova</string>
+    <string name="strShow">Show Dialog</string>
+    <string name="strFrag">Frag Dialog</string>
+    <string name="strTitulo">Elixe</string>
+    <string name="strEngade">Engade</string>
+    <string name="tstAdvertencia">Hey esta valeiro</string>
+    <string name="btnCancel">Cancelar</string>
+    <string name="btnAcept">Aceptar</string>
+    <string name="valorDefecto">Aqui aprece a selecion</string>
+</resources>

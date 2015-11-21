@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Tarefa-I-4B-a10jesuslb</string>
+    <string name="strDialogShow">ShowDialog</string>
+    <string name="strDialogFrag">DialogFrag</string>
+    <string name="strPista">aqui veras a selecion</string>
+    <string name="strBtnEngade">Engade</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".I_4B_a10jesuslb">
+
+   <Button
+       android:id="@+id/btnShow"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/strShow"
+       android:onClick="onClickAmosa"
+       />
+
+    <Button
+        android:layout_alignParentRight="true"
+        android:id="@+id/btnFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strFrag"
+        android:onClick="onClickAmosa"
+        />
+
+    <TextView
+        android:id="@+id/tvAmosa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/valorDefecto"
+        />
+
+    <Button
+        android:id="@+id/btnEngade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/strEngade"
+        android:onClick="onClickAppend"
+        />
+
+    <EditText
+        android:layout_above="@id/btnEngade"
+        android:id="@+id/etEngade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="introduce os valores separados por comas i.e:\nvalor1,valor2..."
+        />
+</RelativeLayout>
