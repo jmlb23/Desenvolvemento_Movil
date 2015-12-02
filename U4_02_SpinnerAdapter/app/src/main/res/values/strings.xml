@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">U4_02_SpinnerAdapter</string>
+    <string name="action_settings">Settings</string>
+    <string name="tvLabel">Escolle un valor</string>
+</resources>

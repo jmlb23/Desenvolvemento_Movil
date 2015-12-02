@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UD_A3A_Thread_a10jesuslb</string>
+    <string name="strBtnThreadEmpeza">Empezar-Thread</string>
+    <string name="strBtnAsincEmpeza">Empezar-Asinc</string>
+    <string name="strBtnThreadPara">Parar-Thread</string>
+    <string name="strBtnAsincPara">Parar-Asinc</string>
+</resources>

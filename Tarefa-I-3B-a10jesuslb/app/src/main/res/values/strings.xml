@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Tarefa-I-3B-a10jesuslb</string>
+    <string name="tvTexto">Os botons abren ventas de dialogo</string>
+
+    <string name="dialogMensaxe">Dialog con mensaxe</string>
+    <string name="dialogBotons">Dialog con botons</string>
+    <string name="lista">Dialog con lista de selecion</string>
+    <string name="unica">Dialog selecion unica</string>
+    <string name="multiple">Dialog con selecion multiple</string>
+    <string name="dailogtexto">Dialog con texto</string>
+
+    <string name="textoTitulo">Dialog Texto</string>
+    <string name="texto">esto é un texto</string>
+    <string name="botonsTitulo">Dialog con Botons</string>
+    <string name="botons">Texto do dialogo con botons</string>
+
+    <string name="listaTitulo">Dialog cunha lista</string>
+
+
+    <string-array name="arrayLista">
+        <item name="primeiro">primeiro</item>
+        <item name="segundo">segundo</item>
+        <item name="terceiro">terceiro</item>
+    </string-array>
+
+    <string name="mulTitulo">Dialog cunha selecion Multiple</string>
+
+
+    <string name="dialogoTexto">Dialogo personalizado</string>
+    <string name="struser">usuario</string>
+    <string name="strpass">contrasinal</string>
+
+    <string name="aceptar">Aceptar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="neutro">Pode ser</string>
+
+</resources>

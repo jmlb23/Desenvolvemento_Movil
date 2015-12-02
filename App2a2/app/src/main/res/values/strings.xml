@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">app2</string>
+    <string name="strBtnReproducir">Reproduce</string>
+    <string name="strBtnGravar">Gravar</string>
+    <string name="strBtnFoto">Foto</string>
+    <string name="strBtnParaGravar">Para Gravar</string>
+    <string name="strPara">Parar</string>
+</resources>
